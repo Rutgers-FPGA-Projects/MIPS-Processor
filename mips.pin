@@ -1,0 +1,560 @@
+ -- Copyright (C) 1991-2009 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		3.3V
+ --					Bank 2:		3.3V
+ --					Bank 3:		3.3V
+ --					Bank 4:		3.3V
+ --					Bank 5:		3.3V
+ --					Bank 6:		3.3V
+ --					Bank 7:		3.3V
+ --					Bank 8:		3.3V
+ --					Bank 9:		3.3V
+ --					Bank 10:	3.3V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks (Bank 13, 14, 15, 16 and 17),
+ --           	    connect each pin marked GND* either individually through a 10k Ohm resistor
+ --           	    to GND or tie all pins together and connect through a single 10k Ohm resistor
+ --           	    to GND.
+ --           	    For non-transceiver I/O banks, connect each pin marked GND* directly to GND
+ --           	    or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+CHIP  "mips"  ASSIGNED TO AN: EP2S15F484C3
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A1        : gnd    :                   :         :           :                
+TEMPDIODEp                   : A2        :        :                   :         :           :                
+VCCIO4                       : A3        : power  :                   : 3.3V    : 4         :                
+MSEL3                        : A4        :        :                   :         : 4         :                
+RESERVED_INPUT               : A5        :        :                   :         : 4         :                
+RESERVED_INPUT               : A6        :        :                   :         : 4         :                
+RESERVED_INPUT               : A7        :        :                   :         : 4         :                
+RESERVED_INPUT               : A8        :        :                   :         : 4         :                
+GND                          : A9        : gnd    :                   :         :           :                
+pc[21]                       : A10       : output : 3.3-V LVTTL       :         : 9         : N              
+VCCIO4                       : A11       : power  :                   : 3.3V    : 4         :                
+VCCIO3                       : A12       : power  :                   : 3.3V    : 3         :                
+writedata[8]                 : A13       : output : 3.3-V LVTTL       :         : 3         : N              
+GND                          : A14       : gnd    :                   :         :           :                
+pc[11]                       : A15       : output : 3.3-V LVTTL       :         : 3         : N              
+pc[3]                        : A16       : output : 3.3-V LVTTL       :         : 3         : N              
+instr[9]                     : A17       : input  : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : A18       :        :                   :         : 3         :                
+RESERVED_INPUT               : A19       :        :                   :         : 3         :                
+VCCIO3                       : A20       : power  :                   : 3.3V    : 3         :                
+nCE                          : A21       :        :                   :         : 3         :                
+GND                          : A22       : gnd    :                   :         :           :                
+VCCIO6                       : AA1       : power  :                   : 3.3V    : 6         :                
+GND                          : AA2       : gnd    :                   :         :           :                
+nCEO                         : AA3       :        :                   :         : 7         :                
+RESERVED_INPUT               : AA4       :        :                   :         : 7         :                
+RESERVED_INPUT               : AA5       :        :                   :         : 7         :                
+RESERVED_INPUT               : AA6       :        :                   :         : 7         :                
+RESERVED_INPUT               : AA7       :        :                   :         : 7         :                
+RESERVED_INPUT               : AA8       :        :                   :         : 7         :                
+readdata[23]                 : AA9       : input  : 3.3-V LVTTL       :         : 10        : N              
+writedata[19]                : AA10      : output : 3.3-V LVTTL       :         : 10        : N              
+aluout[19]                   : AA11      : output : 3.3-V LVTTL       :         : 7         : N              
+writedata[18]                : AA12      : output : 3.3-V LVTTL       :         : 8         : N              
+writedata[1]                 : AA13      : output : 3.3-V LVTTL       :         : 8         : N              
+VREFB8                       : AA14      : power  :                   :         : 8         :                
+instr[0]                     : AA15      : input  : 3.3-V LVTTL       :         : 8         : N              
+aluout[13]                   : AA16      : output : 3.3-V LVTTL       :         : 8         : N              
+aluout[3]                    : AA17      : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : AA18      :        :                   :         : 8         :                
+TCK                          : AA19      : input  :                   :         : 8         :                
+TMS                          : AA20      : input  :                   :         : 8         :                
+GND                          : AA21      : gnd    :                   :         :           :                
+VCCIO1                       : AA22      : power  :                   : 3.3V    : 1         :                
+GND                          : AB1       : gnd    :                   :         :           :                
+nIO_PULLUP                   : AB2       :        :                   :         : 7         :                
+VCCIO7                       : AB3       : power  :                   : 3.3V    : 7         :                
+GND                          : AB4       : gnd    :                   :         :           :                
+RESERVED_INPUT               : AB5       :        :                   :         : 7         :                
+instr[11]                    : AB6       : input  : 3.3-V LVTTL       :         : 7         : N              
+RESERVED_INPUT               : AB7       :        :                   :         : 7         :                
+RESERVED_INPUT               : AB8       :        :                   :         : 7         :                
+GND                          : AB9       : gnd    :                   :         :           :                
+pc[7]                        : AB10      : output : 3.3-V LVTTL       :         : 10        : N              
+VCCIO7                       : AB11      : power  :                   : 3.3V    : 7         :                
+VCCIO8                       : AB12      : power  :                   : 3.3V    : 8         :                
+writedata[15]                : AB13      : output : 3.3-V LVTTL       :         : 8         : N              
+GND                          : AB14      : gnd    :                   :         :           :                
+aluout[23]                   : AB15      : output : 3.3-V LVTTL       :         : 8         : N              
+pc[8]                        : AB16      : output : 3.3-V LVTTL       :         : 8         : N              
+pc[22]                       : AB17      : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : AB18      :        :                   :         : 8         :                
+TRST                         : AB19      : input  :                   :         : 8         :                
+VCCIO8                       : AB20      : power  :                   : 3.3V    : 8         :                
+TDI                          : AB21      : input  :                   :         : 8         :                
+GND                          : AB22      : gnd    :                   :         :           :                
+VCCIO5                       : B1        : power  :                   : 3.3V    : 5         :                
+GND                          : B2        : gnd    :                   :         :           :                
+TDO                          : B3        : output :                   :         : 4         :                
+MSEL2                        : B4        :        :                   :         : 4         :                
+RESERVED_INPUT               : B5        :        :                   :         : 4         :                
+RESERVED_INPUT               : B6        :        :                   :         : 4         :                
+writedata[27]                : B7        : output : 3.3-V LVTTL       :         : 4         : N              
+pc[19]                       : B8        : output : 3.3-V LVTTL       :         : 4         : N              
+readdata[27]                 : B9        : input  : 3.3-V LVTTL       :         : 9         : N              
+writedata[9]                 : B10       : output : 3.3-V LVTTL       :         : 9         : N              
+writedata[23]                : B11       : output : 3.3-V LVTTL       :         : 4         : N              
+readdata[1]                  : B12       : input  : 3.3-V LVTTL       :         : 4         : N              
+instr[5]                     : B13       : input  : 3.3-V LVTTL       :         : 3         : N              
+VREFB3                       : B14       : power  :                   :         : 3         :                
+writedata[31]                : B15       : output : 3.3-V LVTTL       :         : 3         : N              
+aluout[9]                    : B16       : output : 3.3-V LVTTL       :         : 3         : N              
+pc[27]                       : B17       : output : 3.3-V LVTTL       :         : 3         : N              
+readdata[8]                  : B18       : input  : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : B19       :        :                   :         : 3         :                
+nSTATUS                      : B20       :        :                   :         : 3         :                
+GND                          : B21       : gnd    :                   :         :           :                
+VCCIO2                       : B22       : power  :                   : 3.3V    : 2         :                
+RESERVED_INPUT               : C1        :        :                   :         : 5         :                
+RESERVED_INPUT               : C2        :        :                   :         : 5         :                
+TEMPDIODEn                   : C3        :        :                   :         :           :                
+RESERVED_INPUT               : C4        :        :                   :         : 4         :                
+RESERVED_INPUT               : C5        :        :                   :         : 4         :                
+RESERVED_INPUT               : C6        :        :                   :         : 4         :                
+instr[13]                    : C7        : input  : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT               : C8        :        :                   :         : 4         :                
+instr[31]                    : C9        : input  : 3.3-V LVTTL       :         : 9         : N              
+instr[17]                    : C10       : input  : 3.3-V LVTTL       :         : 9         : N              
+RESERVED_INPUT               : C11       :        :                   :         : 4         :                
+readdata[25]                 : C12       : input  : 3.3-V LVTTL       :         : 4         : N              
+instr[28]                    : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
+pc[20]                       : C14       : output : 3.3-V LVTTL       :         : 3         : N              
+writedata[3]                 : C15       : output : 3.3-V LVTTL       :         : 3         : N              
+pc[16]                       : C16       : output : 3.3-V LVTTL       :         : 3         : N              
+pc[10]                       : C17       : output : 3.3-V LVTTL       :         : 3         : N              
+pc[24]                       : C18       : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : C19       :        :                   :         : 3         :                
+CONF_DONE                    : C20       :        :                   :         : 3         :                
+RESERVED_INPUT               : C21       :        :                   :         : 2         :                
+RESERVED_INPUT               : C22       :        :                   :         : 2         :                
+memwrite                     : D1        : output : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT               : D2        :        :                   :         : 5         :                
+RESERVED_INPUT               : D3        :        :                   :         : 4         :                
+MSEL1                        : D4        :        :                   :         : 4         :                
+RESERVED_INPUT               : D5        :        :                   :         : 4         :                
+RESERVED_INPUT               : D6        :        :                   :         : 4         :                
+VREFB4                       : D7        : power  :                   :         : 4         :                
+RESERVED_INPUT               : D8        :        :                   :         : 4         :                
+VREFB4                       : D9        : power  :                   :         : 4         :                
+readdata[22]                 : D10       : input  : 3.3-V LVTTL       :         : 9         : N              
+instr[15]                    : D11       : input  : 3.3-V LVTTL       :         : 3         : N              
+writedata[0]                 : D12       : output : 3.3-V LVTTL       :         : 3         : N              
+pc[25]                       : D13       : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : D14       :        :                   :         : 3         :                
+RESERVED_INPUT               : D15       :        :                   :         : 3         :                
+VREFB3                       : D16       : power  :                   :         : 3         :                
+RESERVED_INPUT               : D17       :        :                   :         : 3         :                
+RESERVED_INPUT               : D18       :        :                   :         : 3         :                
+DCLK                         : D19       :        :                   :         : 3         :                
+RESERVED_INPUT               : D20       :        :                   :         : 3         :                
+RESERVED_INPUT               : D21       :        :                   :         : 2         :                
+instr[30]                    : D22       : input  : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : E1        :        :                   :         : 5         :                
+RESERVED_INPUT               : E2        :        :                   :         : 5         :                
+RESERVED_INPUT               : E3        :        :                   :         : 5         :                
+RESERVED_INPUT               : E4        :        :                   :         : 5         :                
+MSEL0                        : E5        :        :                   :         : 4         :                
+RESERVED_INPUT               : E6        :        :                   :         : 4         :                
+RESERVED_INPUT               : E7        :        :                   :         : 4         :                
+RESERVED_INPUT               : E8        :        :                   :         : 4         :                
+RESERVED_INPUT               : E9        :        :                   :         : 4         :                
+readdata[5]                  : E10       : input  : 3.3-V LVTTL       :         : 4         : N              
+writedata[29]                : E11       : output : 3.3-V LVTTL       :         : 3         : N              
+aluout[10]                   : E12       : output : 3.3-V LVTTL       :         : 3         : N              
+~DATA0~ / RESERVED_INPUT     : E13       : input  : 3.3-V LVTTL       :         : 3         : N              
+instr[14]                    : E14       : input  : 3.3-V LVTTL       :         : 3         : N              
+pc[23]                       : E15       : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : E16       :        :                   :         : 3         :                
+RESERVED_INPUT               : E17       :        :                   :         : 3         :                
+RESERVED_INPUT               : E18       :        :                   :         : 3         :                
+RESERVED_INPUT               : E19       :        :                   :         : 2         :                
+RESERVED_INPUT               : E20       :        :                   :         : 2         :                
+RESERVED_INPUT               : E21       :        :                   :         : 2         :                
+RESERVED_INPUT               : E22       :        :                   :         : 2         :                
+pc[26]                       : F1        : output : 3.3-V LVTTL       :         : 5         : N              
+pc[12]                       : F2        : output : 3.3-V LVTTL       :         : 5         : N              
+VREFB5                       : F3        : power  :                   :         : 5         :                
+RESERVED_INPUT               : F4        :        :                   :         : 5         :                
+RESERVED_INPUT               : F5        :        :                   :         : 5         :                
+RESERVED_INPUT               : F6        :        :                   :         : 4         :                
+RESERVED_INPUT               : F7        :        :                   :         : 4         :                
+RESERVED_INPUT               : F8        :        :                   :         : 4         :                
+RESERVED_INPUT               : F9        :        :                   :         : 4         :                
+GNDA_PLL5                    : F10       : gnd    :                   :         :           :                
+GNDA_PLL5                    : F11       : gnd    :                   :         :           :                
+VCCA_PLL5                    : F12       : power  :                   : 1.2V    :           :                
+aluout[15]                   : F13       : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : F14       :        :                   :         : 3         :                
+RESERVED_INPUT               : F15       :        :                   :         : 3         :                
+RESERVED_INPUT               : F16       :        :                   :         : 3         :                
+RESERVED_INPUT               : F17       :        :                   :         : 3         :                
+VREFB2                       : F18       : power  :                   :         : 2         :                
+RESERVED_INPUT               : F19       :        :                   :         : 2         :                
+RESERVED_INPUT               : F20       :        :                   :         : 2         :                
+RESERVED_INPUT               : F21       :        :                   :         : 2         :                
+RESERVED_INPUT               : F22       :        :                   :         : 2         :                
+RESERVED_INPUT               : G1        :        :                   :         : 5         :                
+RESERVED_INPUT               : G2        :        :                   :         : 5         :                
+RESERVED_INPUT               : G3        :        :                   :         : 5         :                
+instr[10]                    : G4        : input  : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT               : G5        :        :                   :         : 5         :                
+RESERVED_INPUT               : G6        :        :                   :         : 5         :                
+RESERVED_INPUT               : G7        :        :                   :         : 4         :                
+RESERVED_INPUT               : G8        :        :                   :         : 4         :                
+RESERVED_INPUT               : G9        :        :                   :         : 4         :                
+VCC_PLL5_OUT                 : G10       : power  :                   : 3.3V    : 9         :                
+VCCD_PLL5                    : G11       : power  :                   : 1.2V    :           :                
+readdata[30]                 : G12       : input  : 3.3-V LVTTL       :         : 3         : N              
+aluout[29]                   : G13       : output : 3.3-V LVTTL       :         : 3         : N              
+readdata[29]                 : G14       : input  : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT               : G15       :        :                   :         : 3         :                
+RESERVED_INPUT               : G16       :        :                   :         : 3         :                
+RESERVED_INPUT               : G17       :        :                   :         : 2         :                
+RESERVED_INPUT               : G18       :        :                   :         : 2         :                
+RESERVED_INPUT               : G19       :        :                   :         : 2         :                
+RESERVED_INPUT               : G20       :        :                   :         : 2         :                
+RESERVED_INPUT               : G21       :        :                   :         : 2         :                
+pc[6]                        : G22       : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : H1        :        :                   :         : 5         :                
+instr[4]                     : H2        : input  : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT               : H3        :        :                   :         : 5         :                
+RESERVED_INPUT               : H4        :        :                   :         : 5         :                
+pc[4]                        : H5        : output : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT               : H6        :        :                   :         : 5         :                
+RESERVED_INPUT               : H7        :        :                   :         : 4         :                
+VCCINT                       : H8        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT               : H9        :        :                   :         : 4         :                
+VCCPD4                       : H10       : power  :                   : 3.3V    : 4         :                
+pc[18]                       : H11       : output : 3.3-V LVTTL       :         : 3         : N              
+pc[28]                       : H12       : output : 3.3-V LVTTL       :         : 3         : N              
+VCCPD3                       : H13       : power  :                   : 3.3V    : 3         :                
+readdata[0]                  : H14       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND                          : H15       : gnd    :                   :         :           :                
+RESERVED_INPUT               : H16       :        :                   :         : 3         :                
+RESERVED_INPUT               : H17       :        :                   :         : 2         :                
+RESERVED_INPUT               : H18       :        :                   :         : 2         :                
+instr[12]                    : H19       : input  : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : H20       :        :                   :         : 2         :                
+readdata[17]                 : H21       : input  : 3.3-V LVTTL       :         : 2         : N              
+readdata[12]                 : H22       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : J1        : gnd    :                   :         :           :                
+instr[22]                    : J2        : input  : 3.3-V LVTTL       :         : 5         : N              
+pc[9]                        : J3        : output : 3.3-V LVTTL       :         : 5         : N              
+VREFB5                       : J4        : power  :                   :         : 5         :                
+pc[14]                       : J5        : output : 3.3-V LVTTL       :         : 5         : N              
+writedata[11]                : J6        : output : 3.3-V LVTTL       :         : 5         : N              
+RESERVED_INPUT               : J7        :        :                   :         : 5         :                
+RESERVED_INPUT               : J8        :        :                   :         : 5         :                
+VCCINT                       : J9        : power  :                   : 1.2V    :           :                
+GND                          : J10       : gnd    :                   :         :           :                
+VCCINT                       : J11       : power  :                   : 1.2V    :           :                
+GND                          : J12       : gnd    :                   :         :           :                
+VCCINT                       : J13       : power  :                   : 1.2V    :           :                
+GND                          : J14       : gnd    :                   :         :           :                
+aluout[0]                    : J15       : output : 3.3-V LVTTL       :         : 3         : N              
+aluout[11]                   : J16       : output : 3.3-V LVTTL       :         : 2         : N              
+aluout[22]                   : J17       : output : 3.3-V LVTTL       :         : 2         : N              
+pc[13]                       : J18       : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : J19       :        :                   :         : 2         :                
+instr[18]                    : J20       : input  : 3.3-V LVTTL       :         : 2         : N              
+readdata[31]                 : J21       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : J22       : gnd    :                   :         :           :                
+readdata[11]                 : K1        : input  : 3.3-V LVTTL       :         : 5         : N              
+instr[6]                     : K2        : input  : 3.3-V LVTTL       :         : 5         : N              
+pc[29]                       : K3        : output : 3.3-V LVTTL       :         : 5         : N              
+writedata[7]                 : K4        : output : 3.3-V LVTTL       :         : 5         : N              
+readdata[4]                  : K5        : input  : 3.3-V LVTTL       :         : 5         : N              
+writedata[20]                : K6        : output : 3.3-V LVTTL       :         : 5         : N              
+writedata[12]                : K7        : output : 3.3-V LVTTL       :         : 5         : N              
+writedata[14]                : K8        : output : 3.3-V LVTTL       :         : 5         : N              
+GND                          : K9        : gnd    :                   :         :           :                
+VCCINT                       : K10       : power  :                   : 1.2V    :           :                
+GND                          : K11       : gnd    :                   :         :           :                
+VCCINT                       : K12       : power  :                   : 1.2V    :           :                
+GND                          : K13       : gnd    :                   :         :           :                
+VCCPD2                       : K14       : power  :                   : 3.3V    : 2         :                
+instr[20]                    : K15       : input  : 3.3-V LVTTL       :         : 2         : N              
+aluout[1]                    : K16       : output : 3.3-V LVTTL       :         : 2         : N              
+aluout[6]                    : K17       : output : 3.3-V LVTTL       :         : 2         : N              
+aluout[24]                   : K18       : output : 3.3-V LVTTL       :         : 2         : N              
+pc[1]                        : K19       : output : 3.3-V LVTTL       :         : 2         : N              
+instr[2]                     : K20       : input  : 3.3-V LVTTL       :         : 2         : N              
+aluout[8]                    : K21       : output : 3.3-V LVTTL       :         : 2         : N              
+readdata[21]                 : K22       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO5                       : L1        : power  :                   : 3.3V    : 5         :                
+aluout[20]                   : L2        : output : 3.3-V LVTTL       :         : 5         : N              
+aluout[18]                   : L3        : output : 3.3-V LVTTL       :         : 5         : N              
+GNDA_PLL4                    : L4        : gnd    :                   :         :           :                
+GNDA_PLL4                    : L5        : gnd    :                   :         :           :                
+VCCD_PLL4                    : L6        : power  :                   : 1.2V    :           :                
+pc[31]                       : L7        : output : 3.3-V LVTTL       :         : 5         : N              
+aluout[27]                   : L8        : output : 3.3-V LVTTL       :         : 5         : N              
+VCCPD5                       : L9        : power  :                   : 3.3V    : 5         :                
+GND                          : L10       : gnd    :                   :         :           :                
+VCCINT                       : L11       : power  :                   : 1.2V    :           :                
+GND                          : L12       : gnd    :                   :         :           :                
+VCCINT                       : L13       : power  :                   : 1.2V    :           :                
+GND                          : L14       : gnd    :                   :         :           :                
+instr[21]                    : L15       : input  : 3.3-V LVTTL       :         : 2         : N              
+readdata[16]                 : L16       : input  : 3.3-V LVTTL       :         : 2         : N              
+GNDA_PLL1                    : L17       : gnd    :                   :         :           :                
+GNDA_PLL1                    : L18       : gnd    :                   :         :           :                
+VREFB2                       : L19       : power  :                   :         : 2         :                
+writedata[25]                : L20       : output : 3.3-V LVTTL       :         : 2         : N              
+aluout[30]                   : L21       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : L22       : power  :                   : 3.3V    : 2         :                
+VCCIO6                       : M1        : power  :                   : 3.3V    : 6         :                
+readdata[26]                 : M2        : input  : 3.3-V LVTTL       :         : 5         : N              
+readdata[3]                  : M3        : input  : 3.3-V LVTTL       :         : 5         : N              
+VCCA_PLL3                    : M4        : power  :                   : 1.2V    :           :                
+VCCD_PLL3                    : M5        : power  :                   : 1.2V    :           :                
+VCCA_PLL4                    : M6        : power  :                   : 1.2V    :           :                
+GND                          : M7        : gnd    :                   :         :           :                
+VCCINT                       : M8        : power  :                   : 1.2V    :           :                
+GND                          : M9        : gnd    :                   :         :           :                
+VCCINT                       : M10       : power  :                   : 1.2V    :           :                
+GND                          : M11       : gnd    :                   :         :           :                
+VCCINT                       : M12       : power  :                   : 1.2V    :           :                
+GND                          : M13       : gnd    :                   :         :           :                
+VCCINT                       : M14       : power  :                   : 1.2V    :           :                
+GND                          : M15       : gnd    :                   :         :           :                
+VCCD_PLL1                    : M16       : power  :                   : 1.2V    :           :                
+VCCA_PLL1                    : M17       : power  :                   : 1.2V    :           :                
+VCCD_PLL2                    : M18       : power  :                   : 1.2V    :           :                
+VCCA_PLL2                    : M19       : power  :                   : 1.2V    :           :                
+readdata[13]                 : M20       : input  : 3.3-V LVTTL       :         : 2         : N              
+reset                        : M21       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO1                       : M22       : power  :                   : 3.3V    : 1         :                
+writedata[26]                : N1        : output : 3.3-V LVTTL       :         : 6         : N              
+aluout[2]                    : N2        : output : 3.3-V LVTTL       :         : 6         : N              
+readdata[15]                 : N3        : input  : 3.3-V LVTTL       :         : 6         : N              
+instr[24]                    : N4        : input  : 3.3-V LVTTL       :         : 6         : N              
+GNDA_PLL3                    : N5        : gnd    :                   :         :           :                
+GNDA_PLL3                    : N6        : gnd    :                   :         :           :                
+aluout[17]                   : N7        : output : 3.3-V LVTTL       :         : 6         : N              
+instr[29]                    : N8        : input  : 3.3-V LVTTL       :         : 6         : N              
+VCCPD6                       : N9        : power  :                   : 3.3V    : 6         :                
+GND                          : N10       : gnd    :                   :         :           :                
+VCCINT                       : N11       : power  :                   : 1.2V    :           :                
+GND                          : N12       : gnd    :                   :         :           :                
+VCCINT                       : N13       : power  :                   : 1.2V    :           :                
+GND                          : N14       : gnd    :                   :         :           :                
+aluout[12]                   : N15       : output : 3.3-V LVTTL       :         : 1         : N              
+writedata[28]                : N16       : output : 3.3-V LVTTL       :         : 1         : N              
+GNDA_PLL2                    : N17       : gnd    :                   :         :           :                
+GNDA_PLL2                    : N18       : gnd    :                   :         :           :                
+readdata[14]                 : N19       : input  : 3.3-V LVTTL       :         : 1         : N              
+clk                          : N20       : input  : 3.3-V LVTTL       :         : 1         : N              
+aluout[31]                   : N21       : output : 3.3-V LVTTL       :         : 1         : N              
+writedata[6]                 : N22       : output : 3.3-V LVTTL       :         : 1         : N              
+GND                          : P1        : gnd    :                   :         :           :                
+writedata[10]                : P2        : output : 3.3-V LVTTL       :         : 6         : N              
+writedata[16]                : P3        : output : 3.3-V LVTTL       :         : 6         : N              
+VREFB6                       : P4        : power  :                   :         : 6         :                
+pc[15]                       : P5        : output : 3.3-V LVTTL       :         : 6         : N              
+aluout[4]                    : P6        : output : 3.3-V LVTTL       :         : 6         : N              
+instr[1]                     : P7        : input  : 3.3-V LVTTL       :         : 6         : N              
+writedata[22]                : P8        : output : 3.3-V LVTTL       :         : 6         : N              
+VCCINT                       : P9        : power  :                   : 1.2V    :           :                
+VCCPD7                       : P10       : power  :                   : 3.3V    : 7         :                
+GND                          : P11       : gnd    :                   :         :           :                
+VCCINT                       : P12       : power  :                   : 1.2V    :           :                
+GND                          : P13       : gnd    :                   :         :           :                
+VCCINT                       : P14       : power  :                   : 1.2V    :           :                
+VCCPD1                       : P15       : power  :                   : 3.3V    : 1         :                
+instr[16]                    : P16       : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : P17       :        :                   :         : 1         :                
+aluout[5]                    : P18       : output : 3.3-V LVTTL       :         : 1         : N              
+instr[7]                     : P19       : input  : 3.3-V LVTTL       :         : 1         : N              
+instr[25]                    : P20       : input  : 3.3-V LVTTL       :         : 1         : N              
+writedata[21]                : P21       : output : 3.3-V LVTTL       :         : 1         : N              
+GND                          : P22       : gnd    :                   :         :           :                
+readdata[19]                 : R1        : input  : 3.3-V LVTTL       :         : 6         : N              
+writedata[4]                 : R2        : output : 3.3-V LVTTL       :         : 6         : N              
+readdata[10]                 : R3        : input  : 3.3-V LVTTL       :         : 6         : N              
+aluout[26]                   : R4        : output : 3.3-V LVTTL       :         : 6         : N              
+writedata[5]                 : R5        : output : 3.3-V LVTTL       :         : 6         : N              
+RESERVED_INPUT               : R6        :        :                   :         : 6         :                
+RESERVED_INPUT               : R7        :        :                   :         : 6         :                
+RESERVED_INPUT               : R8        :        :                   :         : 6         :                
+RESERVED_INPUT               : R9        :        :                   :         : 7         :                
+GND                          : R10       : gnd    :                   :         :           :                
+VCC_PLL6_OUT                 : R11       : power  :                   : 3.3V    : 10        :                
+VCCA_PLL6                    : R12       : power  :                   : 1.2V    :           :                
+VCCPD8                       : R13       : power  :                   : 3.3V    : 8         :                
+RESERVED_INPUT               : R14       :        :                   :         : 8         :                
+RESERVED_INPUT               : R15       :        :                   :         : 8         :                
+RESERVED_INPUT               : R16       :        :                   :         : 1         :                
+RESERVED_INPUT               : R17       :        :                   :         : 1         :                
+RESERVED_INPUT               : R18       :        :                   :         : 1         :                
+RESERVED_INPUT               : R19       :        :                   :         : 1         :                
+VREFB1                       : R20       : power  :                   :         : 1         :                
+RESERVED_INPUT               : R21       :        :                   :         : 1         :                
+readdata[20]                 : R22       : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : T1        :        :                   :         : 6         :                
+aluout[14]                   : T2        : output : 3.3-V LVTTL       :         : 6         : N              
+writedata[13]                : T3        : output : 3.3-V LVTTL       :         : 6         : N              
+RESERVED_INPUT               : T4        :        :                   :         : 6         :                
+readdata[24]                 : T5        : input  : 3.3-V LVTTL       :         : 6         : N              
+RESERVED_INPUT               : T6        :        :                   :         : 6         :                
+RESERVED_INPUT               : T7        :        :                   :         : 7         :                
+RESERVED_INPUT               : T8        :        :                   :         : 7         :                
+RESERVED_INPUT               : T9        :        :                   :         : 7         :                
+RESERVED_INPUT               : T10       :        :                   :         : 7         :                
+GNDA_PLL6                    : T11       : gnd    :                   :         :           :                
+GNDA_PLL6                    : T12       : gnd    :                   :         :           :                
+aluout[25]                   : T13       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : T14       :        :                   :         : 8         :                
+RESERVED_INPUT               : T15       :        :                   :         : 8         :                
+RESERVED_INPUT               : T16       :        :                   :         : 8         :                
+RESERVED_INPUT               : T17       :        :                   :         : 1         :                
+readdata[7]                  : T18       : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : T19       :        :                   :         : 1         :                
+RESERVED_INPUT               : T20       :        :                   :         : 1         :                
+instr[23]                    : T21       : input  : 3.3-V LVTTL       :         : 1         : N              
+instr[8]                     : T22       : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : U1        :        :                   :         : 6         :                
+aluout[7]                    : U2        : output : 3.3-V LVTTL       :         : 6         : N              
+VREFB6                       : U3        : power  :                   :         : 6         :                
+RESERVED_INPUT               : U4        :        :                   :         : 6         :                
+RESERVED_INPUT               : U5        :        :                   :         : 6         :                
+RESERVED_INPUT               : U6        :        :                   :         : 7         :                
+RESERVED_INPUT               : U7        :        :                   :         : 7         :                
+RESERVED_INPUT               : U8        :        :                   :         : 7         :                
+RESERVED_INPUT               : U9        :        :                   :         : 7         :                
+RESERVED_INPUT               : U10       :        :                   :         : 7         :                
+VCCD_PLL6                    : U11       : power  :                   : 1.2V    :           :                
+pc[30]                       : U12       : output : 3.3-V LVTTL       :         : 8         : N              
+readdata[6]                  : U13       : input  : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : U14       :        :                   :         : 8         :                
+RESERVED_INPUT               : U15       :        :                   :         : 8         :                
+RESERVED_INPUT               : U16       :        :                   :         : 8         :                
+RESERVED_INPUT               : U17       :        :                   :         : 1         :                
+RESERVED_INPUT               : U18       :        :                   :         : 1         :                
+RESERVED_INPUT               : U19       :        :                   :         : 1         :                
+RESERVED_INPUT               : U20       :        :                   :         : 1         :                
+RESERVED_INPUT               : U21       :        :                   :         : 1         :                
+instr[3]                     : U22       : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : V1        :        :                   :         : 6         :                
+RESERVED_INPUT               : V2        :        :                   :         : 6         :                
+RESERVED_INPUT               : V3        :        :                   :         : 6         :                
+RESERVED_INPUT               : V4        :        :                   :         : 6         :                
+PORSEL                       : V5        :        :                   :         : 7         :                
+RESERVED_INPUT               : V6        :        :                   :         : 7         :                
+RESERVED_INPUT               : V7        :        :                   :         : 7         :                
+RESERVED_INPUT               : V8        :        :                   :         : 7         :                
+RESERVED_INPUT               : V9        :        :                   :         : 10        :                
+pc[0]                        : V10       : output : 3.3-V LVTTL       :         : 7         : N              
+pc[2]                        : V11       : output : 3.3-V LVTTL       :         : 8         : N              
+writedata[30]                : V12       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : V13       :        :                   :         : 8         :                
+RESERVED_INPUT               : V14       :        :                   :         : 8         :                
+RESERVED_INPUT               : V15       :        :                   :         : 8         :                
+RESERVED_INPUT               : V16       :        :                   :         : 8         :                
+VCCSEL                       : V17       :        :                   :         : 8         :                
+RESERVED_INPUT               : V18       :        :                   :         : 1         :                
+RESERVED_INPUT               : V19       :        :                   :         : 1         :                
+VREFB1                       : V20       : power  :                   :         : 1         :                
+RESERVED_INPUT               : V21       :        :                   :         : 1         :                
+instr[27]                    : V22       : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : W1        :        :                   :         : 6         :                
+RESERVED_INPUT               : W2        :        :                   :         : 6         :                
+RESERVED_INPUT               : W3        :        :                   :         : 6         :                
+RESERVED_INPUT               : W4        :        :                   :         : 6         :                
+RESERVED_INPUT               : W5        :        :                   :         : 7         :                
+VREFB7                       : W6        : power  :                   :         : 7         :                
+RESERVED_INPUT               : W7        :        :                   :         : 7         :                
+VREFB7                       : W8        : power  :                   :         : 7         :                
+readdata[18]                 : W9        : input  : 3.3-V LVTTL       :         : 10        : N              
+readdata[28]                 : W10       : input  : 3.3-V LVTTL       :         : 7         : N              
+pc[5]                        : W11       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : W12       :        :                   :         : 8         :                
+instr[19]                    : W13       : input  : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : W14       :        :                   :         : 8         :                
+RESERVED_INPUT               : W15       :        :                   :         : 8         :                
+instr[26]                    : W16       : input  : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : W17       :        :                   :         : 8         :                
+nCONFIG                      : W18       :        :                   :         : 8         :                
+RESERVED_INPUT               : W19       :        :                   :         : 1         :                
+RESERVED_INPUT               : W20       :        :                   :         : 1         :                
+RESERVED_INPUT               : W21       :        :                   :         : 1         :                
+RESERVED_INPUT               : W22       :        :                   :         : 1         :                
+RESERVED_INPUT               : Y1        :        :                   :         : 6         :                
+RESERVED_INPUT               : Y2        :        :                   :         : 6         :                
+RESERVED_INPUT               : Y3        :        :                   :         : 7         :                
+PLL_ENA                      : Y4        :        :                   :         : 7         :                
+RESERVED_INPUT               : Y5        :        :                   :         : 7         :                
+RESERVED_INPUT               : Y6        :        :                   :         : 7         :                
+writedata[24]                : Y7        : output : 3.3-V LVTTL       :         : 7         : N              
+RESERVED_INPUT               : Y8        :        :                   :         : 7         :                
+readdata[2]                  : Y9        : input  : 3.3-V LVTTL       :         : 10        : N              
+readdata[9]                  : Y10       : input  : 3.3-V LVTTL       :         : 7         : N              
+writedata[17]                : Y11       : output : 3.3-V LVTTL       :         : 7         : N              
+aluout[21]                   : Y12       : output : 3.3-V LVTTL       :         : 8         : N              
+aluout[16]                   : Y13       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : Y14       :        :                   :         : 8         :                
+aluout[28]                   : Y15       : output : 3.3-V LVTTL       :         : 8         : N              
+writedata[2]                 : Y16       : output : 3.3-V LVTTL       :         : 8         : N              
+pc[17]                       : Y17       : output : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT               : Y18       :        :                   :         : 8         :                
+VREFB8                       : Y19       : power  :                   :         : 8         :                
+RESERVED_INPUT               : Y20       :        :                   :         : 8         :                
+RESERVED_INPUT               : Y21       :        :                   :         : 1         :                
+RESERVED_INPUT               : Y22       :        :                   :         : 1         :                

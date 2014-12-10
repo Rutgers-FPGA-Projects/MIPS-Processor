@@ -1,0 +1,459 @@
+Analysis & Synthesis report for mips
+Sun Jan 06 17:07:00 2013
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: datapath:dp|flopr:pcreg
+ 11. Parameter Settings for User Entity Instance: datapath:dp|mux2:pcbrmux
+ 12. Parameter Settings for User Entity Instance: datapath:dp|mux2:pcmux
+ 13. Parameter Settings for User Entity Instance: datapath:dp|mux2:wrmux
+ 14. Parameter Settings for User Entity Instance: datapath:dp|mux2:resmux
+ 15. Parameter Settings for User Entity Instance: datapath:dp|mux4:srcbmux
+ 16. Parameter Settings for User Entity Instance: datapath:dp|ALU:mainalu
+ 17. Port Connectivity Checks: "datapath:dp|mux2:pcmux"
+ 18. Port Connectivity Checks: "datapath:dp|adder:pcadd1"
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                             ;
++-------------------------------+------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Sun Jan 06 17:07:00 2013    ;
+; Quartus II Version            ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                 ; mips                                     ;
+; Top-level Entity Name         ; mips                                     ;
+; Family                        ; Stratix II                               ;
+; Logic utilization             ; N/A                                      ;
+;     Combinational ALUTs       ; 1,174                                    ;
+;     Dedicated logic registers ; 1,054                                    ;
+; Total registers               ; 1054                                     ;
+; Total pins                    ; 163                                      ;
+; Total virtual pins            ; 0                                        ;
+; Total block memory bits       ; 0                                        ;
+; DSP block 9-bit elements      ; 0                                        ;
+; Total PLLs                    ; 0                                        ;
+; Total DLLs                    ; 0                                        ;
++-------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                          ; mips               ; mips               ;
+; Family name                                                    ; Stratix II         ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto DSP Block Replacement                                     ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                       ;
++----------------------------------+-----------------+-----------------------+---------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path    ;
++----------------------------------+-----------------+-----------------------+---------------------------------+
+; adder.vhd                        ; yes             ; User VHDL File        ; E:/EDAclass/test/adder.vhd      ;
+; alu.vhd                          ; yes             ; User VHDL File        ; E:/EDAclass/test/alu.vhd        ;
+; controller.vhd                   ; yes             ; User VHDL File        ; E:/EDAclass/test/controller.vhd ;
+; datapath.vhd                     ; yes             ; User VHDL File        ; E:/EDAclass/test/datapath.vhd   ;
+; flopr.vhd                        ; yes             ; User VHDL File        ; E:/EDAclass/test/flopr.vhd      ;
+; aludec.vhd                       ; yes             ; User VHDL File        ; E:/EDAclass/test/aludec.vhd     ;
+; maindec.vhd                      ; yes             ; User VHDL File        ; E:/EDAclass/test/maindec.vhd    ;
+; mips.vhd                         ; yes             ; User VHDL File        ; E:/EDAclass/test/mips.vhd       ;
+; mux2.vhd                         ; yes             ; User VHDL File        ; E:/EDAclass/test/mux2.vhd       ;
+; regfile.vhd                      ; yes             ; User VHDL File        ; E:/EDAclass/test/regfile.vhd    ;
+; signext.vhd                      ; yes             ; User VHDL File        ; E:/EDAclass/test/signext.vhd    ;
+; sl2.vhd                          ; yes             ; User VHDL File        ; E:/EDAclass/test/sl2.vhd        ;
+; mux4.vhd                         ; yes             ; User VHDL File        ; E:/EDAclass/test/mux4.vhd       ;
+; ext16.vhd                        ; yes             ; User VHDL File        ; E:/EDAclass/test/ext16.vhd      ;
+; lshift.vhd                       ; yes             ; Auto-Found VHDL File  ; E:/EDAclass/test/lshift.vhd     ;
++----------------------------------+-----------------+-----------------------+---------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++-----------------------------------------------+-------+
+; Resource                                      ; Usage ;
++-----------------------------------------------+-------+
+; Estimated ALUTs Used                          ; 1174  ;
+; Dedicated logic registers                     ; 1054  ;
+;                                               ;       ;
+; Estimated ALUTs Unavailable                   ; 552   ;
+;                                               ;       ;
+; Total combinational functions                 ; 1174  ;
+; Combinational ALUT usage by number of inputs  ;       ;
+;     -- 7 input functions                      ; 516   ;
+;     -- 6 input functions                      ; 146   ;
+;     -- 5 input functions                      ; 231   ;
+;     -- 4 input functions                      ; 113   ;
+;     -- <=3 input functions                    ; 168   ;
+;                                               ;       ;
+; Combinational ALUTs by mode                   ;       ;
+;     -- normal mode                            ; 533   ;
+;     -- extended LUT mode                      ; 516   ;
+;     -- arithmetic mode                        ; 125   ;
+;     -- shared arithmetic mode                 ; 0     ;
+;                                               ;       ;
+; Estimated ALUT/register pairs used            ; 2166  ;
+;                                               ;       ;
+; Total registers                               ; 1054  ;
+;     -- Dedicated logic registers              ; 1054  ;
+;     -- I/O registers                          ; 0     ;
+;                                               ;       ;
+; Estimated ALMs:  partially or completely used ; 1,083 ;
+;                                               ;       ;
+; I/O pins                                      ; 163   ;
+; Maximum fan-out node                          ; clk   ;
+; Maximum fan-out                               ; 1054  ;
+; Total fan-out                                 ; 9803  ;
+; Average fan-out                               ; 4.10  ;
++-----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------+--------------+
+; |mips                      ; 1174 (0)          ; 1054 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 163  ; 0            ; |mips                                   ; work         ;
+;    |controller:cont|       ; 20 (9)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|controller:cont                   ; work         ;
+;       |aludec:ad|          ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|controller:cont|aludec:ad         ; work         ;
+;       |maindec:md|         ; 8 (8)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|controller:cont|maindec:md        ; work         ;
+;    |datapath:dp|           ; 1154 (0)          ; 1054 (0)     ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp                       ; work         ;
+;       |ALU:mainalu|        ; 316 (248)         ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|ALU:mainalu           ; work         ;
+;          |lshift:U1|       ; 68 (68)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|ALU:mainalu|lshift:U1 ; work         ;
+;       |adder:pcadd1|       ; 30 (30)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|adder:pcadd1          ; work         ;
+;       |adder:pcadd2|       ; 30 (30)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|adder:pcadd2          ; work         ;
+;       |flopr:pcreg|        ; 0 (0)             ; 30 (30)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|flopr:pcreg           ; work         ;
+;       |mux2:pcmux|         ; 30 (30)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|mux2:pcmux            ; work         ;
+;       |mux2:resmux|        ; 32 (32)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|mux2:resmux           ; work         ;
+;       |mux2:wrmux|         ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|mux2:wrmux            ; work         ;
+;       |mux4:srcbmux|       ; 53 (53)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|mux4:srcbmux          ; work         ;
+;       |regfile:rf|         ; 659 (659)         ; 1024 (1024)  ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |mips|datapath:dp|regfile:rf            ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++---------------------------------------+------------------------------------------+
+; Register name                         ; Reason for Removal                       ;
++---------------------------------------+------------------------------------------+
+; datapath:dp|flopr:pcreg|q[0]          ; Merged with datapath:dp|flopr:pcreg|q[1] ;
+; datapath:dp|flopr:pcreg|q[1]          ; Stuck at GND due to stuck port data_in   ;
+; Total Number of Removed Registers = 2 ;                                          ;
++---------------------------------------+------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1054  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 30    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1024  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 ALUTs       ; 4 ALUTs              ; 4 ALUTs                ; Yes        ; |mips|datapath:dp|flopr:pcreg|q[28]                ;
+; 3:1                ; 26 bits   ; 52 ALUTs      ; 52 ALUTs             ; 0 ALUTs                ; Yes        ; |mips|datapath:dp|flopr:pcreg|q[4]                 ;
+; 3:1                ; 16 bits   ; 32 ALUTs      ; 32 ALUTs             ; 0 ALUTs                ; No         ; |mips|datapath:dp|mux4:srcbmux|y[5]                ;
+; 3:1                ; 15 bits   ; 30 ALUTs      ; 30 ALUTs             ; 0 ALUTs                ; No         ; |mips|datapath:dp|mux4:srcbmux|y[30]               ;
+; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mips|datapath:dp|ALU:mainalu|lshift:U1|ShiftLeft0 ;
+; 3:1                ; 4 bits    ; 8 ALUTs       ; 8 ALUTs              ; 0 ALUTs                ; No         ; |mips|datapath:dp|ALU:mainalu|lshift:U1|ShiftLeft0 ;
+; 10:1               ; 15 bits   ; 90 ALUTs      ; 90 ALUTs             ; 0 ALUTs                ; No         ; |mips|datapath:dp|ALU:mainalu|result[7]            ;
+; 11:1               ; 12 bits   ; 84 ALUTs      ; 84 ALUTs             ; 0 ALUTs                ; No         ; |mips|datapath:dp|ALU:mainalu|result[24]           ;
+; 13:1               ; 3 bits    ; 24 ALUTs      ; 24 ALUTs             ; 0 ALUTs                ; No         ; |mips|datapath:dp|ALU:mainalu|result[30]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|flopr:pcreg ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; width          ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|mux2:pcbrmux ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; width          ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|mux2:pcmux ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; width          ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|mux2:wrmux ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; width          ; 5     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|mux2:resmux ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; width          ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|mux4:srcbmux ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; width          ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|ALU:mainalu ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; N              ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|mux2:pcmux" ;
++----------+-------+----------+----------------------+
+; Port     ; Type  ; Severity ; Details              ;
++----------+-------+----------+----------------------+
+; d1[1..0] ; Input ; Info     ; Stuck at GND         ;
++----------+-------+----------+----------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|adder:pcadd1" ;
++----------+-------+----------+------------------------+
+; Port     ; Type  ; Severity ; Details                ;
++----------+-------+----------+------------------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND           ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND           ;
+; b[2]     ; Input ; Info     ; Stuck at VCC           ;
++----------+-------+----------+------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Sun Jan 06 17:06:22 2013
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
+Info: Found 2 design units, including 1 entities, in source file adder.vhd
+    Info: Found design unit 1: adder-behave
+    Info: Found entity 1: adder
+Info: Found 2 design units, including 1 entities, in source file alu.vhd
+    Info: Found design unit 1: ALU-behave
+    Info: Found entity 1: ALU
+Info: Found 2 design units, including 1 entities, in source file controller.vhd
+    Info: Found design unit 1: controller-struct
+    Info: Found entity 1: controller
+Info: Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info: Found design unit 1: datapath-struct
+    Info: Found entity 1: datapath
+Info: Found 2 design units, including 1 entities, in source file flopr.vhd
+    Info: Found design unit 1: flopr-asynchronous
+    Info: Found entity 1: flopr
+Info: Found 2 design units, including 1 entities, in source file aludec.vhd
+    Info: Found design unit 1: aludec-behave
+    Info: Found entity 1: aludec
+Info: Found 2 design units, including 1 entities, in source file maindec.vhd
+    Info: Found design unit 1: maindec-behave
+    Info: Found entity 1: maindec
+Info: Found 2 design units, including 1 entities, in source file mips.vhd
+    Info: Found design unit 1: mips-struct
+    Info: Found entity 1: mips
+Info: Found 2 design units, including 1 entities, in source file mux2.vhd
+    Info: Found design unit 1: mux2-behave
+    Info: Found entity 1: mux2
+Info: Found 2 design units, including 1 entities, in source file regfile.vhd
+    Info: Found design unit 1: regfile-behave
+    Info: Found entity 1: regfile
+Info: Found 2 design units, including 1 entities, in source file signext.vhd
+    Info: Found design unit 1: signext-behave
+    Info: Found entity 1: signext
+Info: Found 2 design units, including 1 entities, in source file sl2.vhd
+    Info: Found design unit 1: sl2-behave
+    Info: Found entity 1: sl2
+Info: Found 2 design units, including 1 entities, in source file top.vhd
+    Info: Found design unit 1: top-test
+    Info: Found entity 1: top
+Info: Found 2 design units, including 1 entities, in source file mux4.vhd
+    Info: Found design unit 1: mux4-behave
+    Info: Found entity 1: mux4
+Info: Found 2 design units, including 1 entities, in source file ext16.vhd
+    Info: Found design unit 1: ext16-behave
+    Info: Found entity 1: ext16
+Info: Elaborating entity "mips" for the top level hierarchy
+Info: Elaborating entity "controller" for hierarchy "controller:cont"
+Info: Elaborating entity "maindec" for hierarchy "controller:cont|maindec:md"
+Info: Elaborating entity "aludec" for hierarchy "controller:cont|aludec:ad"
+Info: Elaborating entity "datapath" for hierarchy "datapath:dp"
+Info: Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:pcreg"
+Info: Elaborating entity "adder" for hierarchy "datapath:dp|adder:pcadd1"
+Info: Elaborating entity "sl2" for hierarchy "datapath:dp|sl2:immsh"
+Info: Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:pcbrmux"
+Info: Elaborating entity "regfile" for hierarchy "datapath:dp|regfile:rf"
+Warning (10492): VHDL Process Statement warning at regfile.vhd(25): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at regfile.vhd(28): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:wrmux"
+Info: Elaborating entity "signext" for hierarchy "datapath:dp|signext:se"
+Info: Elaborating entity "ext16" for hierarchy "datapath:dp|ext16:e16"
+Info: Elaborating entity "mux4" for hierarchy "datapath:dp|mux4:srcbmux"
+Info: Elaborating entity "ALU" for hierarchy "datapath:dp|ALU:mainalu"
+Warning: Using design file lshift.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: lshift-behave
+    Info: Found entity 1: lshift
+Info: Elaborating entity "lshift" for hierarchy "datapath:dp|ALU:mainalu|lshift:U1"
+Info: Found 1 instances of uninferred RAM logic
+    Info: RAM logic "datapath:dp|regfile:rf|mem" is uninferred due to asynchronous read logic
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pc[0]" is stuck at GND
+    Warning (13410): Pin "pc[1]" is stuck at GND
+Warning: Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "instr[26]"
+    Warning (15610): No output dependent on input pin "instr[30]"
+Info: Implemented 2361 device resources after synthesis - the final resource count might be different
+    Info: Implemented 66 input pins
+    Info: Implemented 97 output pins
+    Info: Implemented 2198 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 256 megabytes
+    Info: Processing ended: Sun Jan 06 17:07:00 2013
+    Info: Elapsed time: 00:00:38
+    Info: Total CPU time (on all processors): 00:00:37
+
+
